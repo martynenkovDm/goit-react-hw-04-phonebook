@@ -54,7 +54,11 @@ export default function App() {
     //     ),
     //   };
     // });
-    setContacts(contacts.filter(contact => contact.id !== contactId));
+
+    // setContacts(contacts.filter(contact => contact.id !== contactId));
+    setContacts(prevState =>
+      prevState.filter(contact => contact.id !== contactId)
+    );
   };
 
   const changeFilter = e => {
